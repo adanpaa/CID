@@ -1,13 +1,12 @@
-package examples.behaviours;
-
+package oslinearregression;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import java.util.*;
-import java.lang.Math;
 
 
 public class OneShotAgent extends Agent {
 
+    @Override
     protected void setup() {
         System.out.println("Agent "+getLocalName()+" started.");
         addBehaviour(new MyOneShotBehaviour());
@@ -15,6 +14,7 @@ public class OneShotAgent extends Agent {
 
     private class MyOneShotBehaviour extends OneShotBehaviour {
 
+        @Override
         public void action() {
             ArrayList<Double> bounds = new ArrayList<>();
             ArrayList<Double> best_score = new ArrayList<>();
@@ -51,10 +51,10 @@ public class OneShotAgent extends Agent {
            return result;
         }
 
+        @Override
         public int onEnd() {
             myAgent.doDelete();
             return super.onEnd();
         }
     }
 }
-
