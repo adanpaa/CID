@@ -20,7 +20,8 @@ public class LinearRegression {
         b0 = 0.0;
         b1 = 0.0;
         double alpha = 0.0005;
-         while (calculatemS() > 0.0001){
+        
+        while (calculatemS() > 0.0001){
             double pDB0 = 0.0;
             double pDb1 = 0.0;
             for(int i =0; i < n; i++) {
