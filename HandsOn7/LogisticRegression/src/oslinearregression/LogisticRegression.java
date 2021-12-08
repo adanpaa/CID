@@ -10,7 +10,7 @@ public class LogisticRegression {
     private final Double y1 = 0.0;
     private final Double y2 = 1.0;
     private final Double y3 = 1.0;
-    private final Integer iterations = 100;
+    private final Integer iterations = 50;
     private final Double learningR = 0.1;
     
     
@@ -19,7 +19,7 @@ public class LogisticRegression {
     }
         
     public void gradientDescent() {
-        for(int i = 0; i < iterations; i++){
+        for(int i = 0; i<iterations; i++){
             Double sigmoidx1 = calculateS(x1);
             Double sigmoidx2 = calculateS(x2);
             Double sigmoidx3 = calculateS(x3);

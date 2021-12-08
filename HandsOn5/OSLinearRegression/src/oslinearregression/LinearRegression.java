@@ -11,7 +11,6 @@ public class LinearRegression {
     private Double advertising;
     private final Double n = Double.valueOf(x.size());
     
-    
     public void LinearRegression() {
         sales = b0 + (b1* advertising);
     }
@@ -46,7 +45,9 @@ public class LinearRegression {
         for(int i = 0; i < n; i++){
                 mS += (y.get(i) - (b0 + (b1*x.get(i))));
             }
-            return (mS*mS) * (1.0/n);
+            Double e = (mS*mS) * (1.0/n);
+            //System.out.println("Error: " + e);
+            return e;
     }
     
     public Double getSales() {
